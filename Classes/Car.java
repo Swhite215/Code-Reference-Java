@@ -10,6 +10,26 @@ public class Car {
 
     }
 
+    //Constructor - No Parameters = Default Values
+    public Car() {
+        //Call Parameterized Constructor with Default Values
+        this(4, 4, "prototype", "prototype", "silver");
+    }
+
+    //Constructor - With Parameters
+    public Car(int doors, int wheels, String model, String engine, String color) {
+        this.doors = doors;
+        this.wheels = wheels;
+        this.model = model;
+        this.engine = engine;
+        this.color = color;
+    }
+
+    //Constructor - With Partial Parameters
+    public Car(String model, String engine, String color) {
+        this (4, 4, model, engine, color);
+    }
+
     public void setModel(String model) {
         this.model = model;
     }
