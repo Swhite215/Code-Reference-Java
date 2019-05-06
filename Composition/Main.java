@@ -13,7 +13,7 @@ public class Main {
 
         //Accessing Composition Classes using Getters
         thePc.getMonitor().drawPixelAt(1,2, "green");
-        thePc.getCase().pressPowerButton();
+        thePc.powerUp(); //Uses further privitization of composition components
         thePc.getMotherboard().loadProgram("Final Fantasy VII");
 
 
