@@ -10,7 +10,7 @@ public class PC {
     }
 
     //Getter methods for composition classes
-    public Case getCase() {
+    private Case getCase() {
         return this.theCase;
     }
     
@@ -18,7 +18,20 @@ public class PC {
         return this.monitor;
     }
 
+    //Example of further limiting composition
     public Motherboard getMotherboard() {
         return this.motherboard
     }
+
+    public void powerUp() {
+        theCase.pressPowerButton();
+        drawLogo();
+    }
+
+    private void drawLogo() {
+        this.getMonitor().drawPixelAt(1200, 50, "yellow"); //Option #1
+        monitor.drawPixelAt(1200, 5, "yellow"); //Option #2
+    }
+
+
 }
