@@ -5,7 +5,7 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        // Variables
+        // Variables - Array Intializer Block
         int[] intArray = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         double[] doubleArray = new double[10];
 
