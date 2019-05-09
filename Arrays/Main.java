@@ -48,3 +48,8 @@ public class Main {
         return (double) sum / array.length;
     }
 }
+
+// Common Errors
+// - ArrayIndexOuOfBoundsException
+// - Starting at 1 not 0 with loop
+// - Loop condition should be <
