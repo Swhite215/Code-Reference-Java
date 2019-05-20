@@ -6,19 +6,28 @@ public class Demo {
     public static void main(String[] args) {
         LinkedList<String> placesToVisit = new LinkedList<String>();
 
+        addInOrder(placesToVisit, "Sydney");
+        addInOrder(placesToVisit, "Melbourne");
+        addInOrder(placesToVisit, "Brisbane");
+        addInOrder(placesToVisit, "Perth");
+        addInOrder(placesToVisit, "Canberra");
+        addInOrder(placesToVisit, "Adelaide");
+        addInOrder(placesToVisit, "Darwin");
+
         // Adding to Linked List
-        placesToVisit.add("Sydney");
-        placesToVisit.add("Melbourne");
-        placesToVisit.add("Brisbane");
-        placesToVisit.add("Perth");
-        placesToVisit.add("Canberra");
-        placesToVisit.add("Adelaide");
-        placesToVisit.add("Darwin");
+        // placesToVisit.add("Sydney");
+        // placesToVisit.add("Melbourne");
+        // placesToVisit.add("Brisbane");
+        // placesToVisit.add("Perth");
+        // placesToVisit.add("Canberra");
+        // placesToVisit.add("Adelaide");
+        // placesToVisit.add("Darwin");
 
         printList(placesToVisit);
 
         // Inserting a Record
-        placesToVisit.add(1, "Alice Springs");
+        // placesToVisit.add(1, "Alice Springs");
+        addInOrder(placesToVisit, "Alice Springs");
 
         printList(placesToVisit);
 
@@ -38,7 +47,7 @@ public class Demo {
     }
 
     private static boolean addInOrder(LinkedList<String> linkedList, String newCity) {
-        ListIterator<String> stringListIterator = linkedList.iterator();
+        ListIterator<String> stringListIterator = linkedList.listIterator(); // Doesn't point to 1st entry
 
         while (stringListIterator.hasNext()) {
             int comparison = stringListIterator.next().compareTo(newCity);
@@ -58,5 +67,6 @@ public class Demo {
         }
 
         stringListIterator.add(newCity);
+        return true;
     }
 }
