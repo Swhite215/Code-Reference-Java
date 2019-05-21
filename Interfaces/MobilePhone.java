@@ -1,4 +1,4 @@
-public class MobilePhone implements ITelephone {
+public class MobilePhone implements ITelephone, IAnotherInterface {
     private int myNumber;
     private boolean isRinging;
     private boolean isOn = false;
