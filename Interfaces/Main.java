@@ -6,5 +6,10 @@ public class Main {
 
         // Option #2 - Using Class that Implements Interface
         DeskPhone myPhoneTwo = new DeskPhone(1234567890);
+
+        ITelephone myMobilePhone;
+        myMobilePhone = new MobilePhone(1234567890);
+
+        MobilePhone myMobilePhoneTwo = new MobilePhone(1234567890);
     }
 }
