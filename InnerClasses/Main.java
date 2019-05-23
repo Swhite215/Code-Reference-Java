@@ -19,6 +19,7 @@ public class Main {
         mcLaren.changeGear(2);
         System.out.println(mcLaren.wheelSpeed(1000));
 
+        // Local Class - Separate
         class ClickListener implements Button.OnClickListener {
             public ClickListener() {
                 System.out.println("I've been attacked!");
@@ -31,6 +32,14 @@ public class Main {
         }
 
         buttonPrint.setOnClickListener(new ClickListener());
+
+        // Anonymous Class - No Name
+        buttonPrint.setOnClickListner(new Button.OnClickListener() {
+            @Override
+            public void onClick(String title) {
+                System.out.println(title + " was clicked!");
+            }
+        });
         listen();
     }
 
