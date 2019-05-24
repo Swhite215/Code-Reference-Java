@@ -7,5 +7,6 @@ public class Main {
         Hawk bird = new Hawk("Laser Wing");
         bird.breathe();
         bird.eat();
+        bird.fly();
     }
 }
